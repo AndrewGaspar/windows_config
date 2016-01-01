@@ -35,7 +35,7 @@ if(!(IsChocolateyAvailable)) {
     return
 }
 
-@("git", "visualstudiocode", "f.lux") | % { InstallPackageIfNotInstalled $_ }
+@("git", "visualstudiocode", "f.lux", "github") | % { InstallPackageIfNotInstalled $_ }
 
 Install-Module posh-git
 
