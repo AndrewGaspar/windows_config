@@ -37,7 +37,7 @@ if(!(IsChocolateyAvailable)) {
 
 @("git", "visualstudiocode", "f.lux") | % { InstallPackageIfNotInstalled $_ }
 
-Copy-Item "$PSScriptRoot\vs_code_settings.json" "~\AppData\Roaming\Code\User\settings.json"
-
 Install-Module posh-git
 
+Copy-Item "$PSScriptRoot\vs_code_settings.json" "~\AppData\Roaming\Code\User\settings.json"
+Copy-Item "$PSScriptRoot\Microsoft.PowerShell_profile.ps1" $profile
